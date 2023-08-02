@@ -27,7 +27,7 @@ function new_parse_str($string , &$arr){
 
 function new_explode($separator, $string){
 
-    for($i=0 ; $i< strlen($string); $i++){
+    for($i=0 ; $i< new_strlen($string); $i++){
      
       $string_char[$i]= $string[$i];
     }
@@ -56,10 +56,16 @@ function new_explode($separator, $string){
 // string length rebuild
 function new_strlen($string){
     $index =0;
-    while($string[$index]!=""){
+    while(!empty($string[$index])){
       $arr[]= $string[$index];
       $index ++;
     }
     return $index;
       
     }
+
+    function new_empty($var){
+      return (!$var|| $var==0|| $var=="" || $var==false);
+    }
+
+   
