@@ -64,8 +64,9 @@ function new_strlen($string){
       
     }
 
+    
+
+//new empty function
     function new_empty($var){
       return (!$var|| $var==0|| $var=="" || $var==false);
     }
-
-   
